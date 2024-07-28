@@ -1,7 +1,133 @@
-# Summary
+# HTML
 
-In summary, this book has no content whatsoever.
+This chapter introduces the basics of HTML. We start with a brief overview of HTML and discuss also some elements that can be used in an HTML document, including headings, paragraphs, lists, links, images, and tables. However, this chapter is not supposed to be a comprehensive guide to HTML. Instead it is meant to give you a basic understanding of HTML.
+
+Why is a basis understand of HTML important for the Social Science? HTML is the language used to create web pages, but you will probably never be in the position to create a web page from scratch. However, you need a basic understanding if you want to collect data from the web, or if you want to create a web page using a content management system (CMS) like WordPress. In addition, you will need to know some HTML if you want to create a web-based survey, or if you want to create a web-based experiment. Finally, you will need to know some HTML if you want to create a web-based visualization.
+
+This chapter is based on the book "HTML and CSS: Design and Build Websites" by Jon Duckett. This book is a great introduction to HTML and CSS, and I highly recommend it if you want to learn more about HTML and CSS.
+
+
+## The basics
+
+HTML stands for HyperText Markup Language. HTML is the standard markup language for creating web pages. A markup language is a set of markup tags. HTML uses markup tags to describe web pages. HTML tags are surrounded by angle brackets, like this: `<html>`. HTML tags normally come in pairs like `<p>` and `</p>`. The first tag in a pair is the start tag, the second tag is the end tag. The end tag is written like the start tag, but with a forward slash inserted before the tag name.
+
+All html documents must start with a `<!DOCTYPE html>` declaration. The HTML document itself begins with `<html>` and ends with `</html>`. Before the content of the HTML document, you will find the `<head>` element. The `<head>` element contains meta-information about the HTML document, like the title of the document, and links to CSS files. CSS stands for Cascading Style Sheets. CSS is used to define the style of the HTML document, which is why we will not bother how the document looks in this chapter. The header also includes links to JavaScript files, which are used to add interactivity to the HTML document. With JavaScript, you can create web-based games, web-based surveys, and web-based experiments. The following code shows the structure a typical HTML document that we discussed, including links in the header to CSS and JavaScript files:
+
+```html
+ <!-- A typical HTML document -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Page Title</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  
+  <!-- The visible part of the HTML document is between <body> and </body> -->
+  
+</body>
+</html>
+```
+
+
+Thus, there is a lot going on in the header of an HTML document, but we will not bother with that in this chapter. The visible part of the HTML document is between `<body>` and `</body>`. The body of the HTML document contains all the content of the document, like text, images, links. To give the content of the HTML document some structure, we can use headings, paragraphs, lists, links. The `<h1>` tag defines the most important heading, the `<h2>` tag defines the second most important heading, and so on. The `<p>` tag defines a paragraph. The `<ul>` tag defines an unordered list, and the `<ol>` tag defines an ordered list. Each list item is defined with the `<li>` tag. The following code shows an example of headings, paragraphs, and lists:
+
+```html
+<!-- Example of headings, paragraphs, and lists -->
+<h1>This is title heading</h1>
+<h2>This is another heading</h2>
+<p>This is a paragraph.</p>
+<ul>
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+</ul>
+<ol>
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+</ol>
+```
+
+
+In addition, we can also insert images or add a link in an HTML document. The `<img>` tag defines an image. The `<a>` tag defines a hyperlink to another website. The following code shows an example code:
+
+```html
+<!-- Example of images and links -->
+<img src="image.jpg" alt="Description of the image">
+<a href="https://www.google.com">This is a link to Google</a>
+```
+
+Did you see that the img tag has an attribute called `src`? The `src` attribute specifies the URL of the image. The `alt` attribute provides an alternative text for an image. The `href` attribute specifies the URL of the page the link goes to. The text between the `<a>` and `</a>` tags will be displayed as a hyperlink. Thus, HTML tags can have attributes that provide additional information about the tag which we should keep in mind for the bigger picture.
+
+Okay, we know how a HTML file is structured, and we know some elements that can be used in an HTML document. What else do we need to know for a basic understanding about HTML? Say we want to use an image instead of the text as a link? We can use the `<img>` tag inside the `<a>` tag. The following code shows an example:
+
+```html
+<!-- Example of an image as a link -->
+<a href="https://www.google.com">
+  <img src="image.jpg" alt="Description of the image">
+</a>
+```
+
+
+
+Finally, we need to discuss how we can harvest data from the web. Maybe, the data is provided as a table on a website. The `<table>` tag is used to create a table in an HTML document. The `<tr>` tag defines a row in a table. The `<td>` tag defines a cell in a table. The following code shows an example of a table:
+
+```html
+<!-- Example of a table -->
+<table>
+  <tr>
+    <td>Row 1, Cell 1</td>
+    <td>Row 1, Cell 2</td>
+  </tr>
+  <tr>
+    <td>Row 2, Cell 1</td>
+    <td>Row 2, Cell 2</td>
+  </tr>
+</table>
+```
+
+How can we extract the data from the table? We can use a programming language like Python to extract the data from the table. We can use the `requests` library to download the HTML document, and we can use the `BeautifulSoup` library to parse the HTML document. The following code shows an example of how we can extract the data from a table:
+
+```python
+import requests
+from bs4 import BeautifulSoup
+
+url = 'https://www.example.com'
+response = requests.get(url)
+soup = BeautifulSoup(response.text, 'html.parser')
+
+tables = soup.find_all('table')
+
+for table in tables:
+  rows = table.find_all('tr')
+  for row in rows:
+    cells = row.find_all('td')
+    for cell in cells:
+      print(cell.text)
+```
+
+
+In R, we can use the `rvest` package to extract the data from the table. The following code shows an example of how we can extract the data from a table in R:
 
 ```{r}
-1 + 1
+library(rvest)
+
+url <- 'https://edgar-treischl.github.io/PracticeR/articles/web_only/webscraping.html'
+html <- read_html(url)
+
+
+html |>
+  html_element("table") |>
+  html_table() |> 
+  head()
 ```
+
+
+
+ 
+
+
+
+

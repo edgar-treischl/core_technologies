@@ -3,22 +3,33 @@ project:
   output-dir: docs
 
 book:
-  title: "Core_Technologies"
-  author: "Norah Jones"
-  date: "5/18/2024"
+  title: "Social Data Science"
+  subtitle: "Core Technologies and Applications"
+  author: "Edgar J. Treischl"
+  date: last-modified
   chapters:
     - index.qmd
     - intro.qmd
     - summary.qmd
     - references.qmd
+  navbar:
+    right:
+      - icon: github
+        href: https://github.com/edgar-treischl/core_technologies
+        aria-label: GitHub
+
 
 bibliography: references.bib
+cover-image: cover.png
 
 format:
   html:
-    theme: cosmo
+    theme: litera
+    include-in-header: 
+      - progress-bar.html
   pdf:
     documentclass: scrreprt
+    highlight-style: kate
 
 
 

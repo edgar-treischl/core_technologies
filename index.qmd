@@ -1,9 +1,35 @@
 # Preface {.unnumbered}
 
-This is a Quarto book.
+This is work in progress. Ideas for the book:
 
-To learn more about Quarto books visit <https://quarto.org/docs/books>.
 
-```{r}
-1 + 1
-```
+Programming:
+
+- R vs. Python
+- Others: Bash, Command Line
+
+Web:
+
+- HTML/CSS
+- Java
+- XML/JSON
+
+Data:
+
+- Databases (SQL/No-SQL)
+- Webscraping
+- APIs
+
+Reporting:
+
+- RMarkdown: Pandoc, LaTeX
+- Quarto
+- Apps: Shiny/Streamlit
+
+Cloud computing
+
+Production:
+
+- GIT/GitHub Actions
+- R Package Development
+- Docker
