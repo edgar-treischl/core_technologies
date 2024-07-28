@@ -126,8 +126,81 @@ html |>
 
 
 
- 
+## CSS
 
+CSS stands for Cascading Style Sheets. CSS is used to define the style of the HTML document. The style of the HTML document includes the layout, the colors, the fonts, and the spacing. CSS is used to separate the content of the HTML document from the style of the HTML document. Why do we seperate the content from the style? By separating the content from the style, we can change the style of the HTML document without changing the content. This is useful if we want to change the style of the HTML document for different devices, like a desktop computer, a tablet, or a smartphone. In addition, we only need to change the style in one place, which makes it easier to maintain the HTML document.
+
+Let me give a simple example. Say we want to color all paragraphs red and all headings blue. Each time we insert a paragraph or a heading in the HTML document, we could specify the color with the `style` attribute. The next console shows how we can specify the color manually: 
+
+```html
+<!-- Example of inline sytle (CSS) -->
+<h1 style="color: blue;">This is a heading</h1>
+<p style="color: red;">This is a paragraph.</p>
+<p>This is another paragraph.</p>
+```
+
+Did you realize that the last paragraph will not be displayed in red? Inline CSS is bothersome and definetly not the best way to specify the style of an HTML document. Instead, we can use the `<style>` tag to define the style of the entire HTML document. The `<style>` tag is placed in the `<head>` element. The following code shows an example of how we can color all paragraphs red and all headings blue:
+
+```html
+<!-- Example of CSS -->
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    p {
+      color: green;
+    }
+    
+    p.important {
+      color: red;
+    }
+    
+    h1 {
+      color: blue;
+    }
+  </style>
+</head>
+
+```
+
+
+The CSS code is placed between the `<style>` and `</style>` tags. The CSS code is written in a selector and declaration block. The selector points to the HTML element you want to style. The declaration block contains one or more declarations separated by semicolons. Each declaration includes a CSS property name and a value, separated by a colon. 
+
+Did you see that I included a class in the CSS code? Paragraphs with the class `important` will be displayed in red, while all other paragraphs will be displayed in green. The class is defined with a dot in front of the class name. Thus, if the HTML code contains a paragraph with the class `important`, the paragraph will be displayed in red:
+
+```html
+<!-- Example of CSS with class -->
+  <h1>This is a heading</h1>
+  <p>This is a paragraph.</p>
+  <p class="important">This is an important paragraph.</p>
+  <p id="unique">Look, a unicorn.</p>
+</body>
+</html>
+```
+
+In addition to classes, we can also use the ID to style HTML elements. The ID is defined with a hash in front of the ID name. The ID is used to uniquely identify an element in the HTML document. The following code shows the corresponding CSS code to select an element with a specific ID:
+
+```html
+<style>
+  #unique {
+      color: purple;
+    }
+</style>
+```
+
+In a real world application, we would not use the `<style>` tag to define the style of the HTML document. Instead, we would use an external CSS file which contains the style of the HTML document. Look out for link tag in the header of a HTML document. The link tag is used to link an external CSS file to the HTML document.
+
+```html
+<!-- Example of an external CSS file -->
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+```
+
+
+Thus, look out for the CSS file if you want to change the style of a HTML document.
 
 
 
