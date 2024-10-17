@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Social Data Science",
     "section": "",
-    "text": "Preface\nThis is work in progress. Ideas for the book:\nProgramming:\n\nR vs. Python\nOthers: Bash, Command Line\n\nWeb:\n\nHTML/CSS\nJava\nXML/JSON\n\nData:\n\nDatabases (SQL/No-SQL)\nWebscraping\nAPIs\n\nReporting:\n\nRMarkdown: Pandoc, LaTeX\nQuarto\nApps: Shiny/Streamlit\n\nCloud computing\nProduction:\n\nGIT/GitHub Actions\nR Package Development\nDocker"
+    "text": "Preface\nThis is work in progress. Ideas for the book:\nProgramming:\n\nBash\nR\nPython\n\nData:\n\nSQL and other types of databases\nWebscraping\nAPIs\n\nWeb:\n\nHTML\nCSS\nJavaScript\n\nProducts:\n\nReports\nApps\nPackages\n\nProduction:\n\nVersion control: Git\nCI/CD: GitHub Actions\nDocker"
   },
   {
     "objectID": "intro.html",

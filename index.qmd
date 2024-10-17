@@ -2,34 +2,33 @@
 
 This is work in progress. Ideas for the book:
 
-
 Programming:
 
-- R vs. Python
-- Others: Bash, Command Line
-
-Web:
-
-- HTML/CSS
-- Java
-- XML/JSON
+- Bash
+- R
+- Python
 
 Data:
 
-- Databases (SQL/No-SQL)
+- SQL and other types of databases
 - Webscraping
 - APIs
 
-Reporting:
+Web:
 
-- RMarkdown: Pandoc, LaTeX
-- Quarto
-- Apps: Shiny/Streamlit
+- HTML
+- CSS
+- JavaScript
 
-Cloud computing
+Products:
+
+- Reports
+- Apps
+- Packages
+
 
 Production:
 
-- GIT/GitHub Actions
-- R Package Development
+- Version control: Git
+- CI/CD: GitHub Actions
 - Docker
